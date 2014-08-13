@@ -16,7 +16,20 @@
    <P>Can we add some javascript?</P>
    
 <canvas id="rectangle" width="300" height="300"></canvas>
- 
+ <script type="text/javascript">
+  function draw () {
+    var canvas = document.getElementById('rectangle');
+    if (canvas.getContext) {
+      var context = canvas.getContext('2d');
+      
+      context.fillStyle = "rgb(150,29,28)";
+      context.fillRect (10,10,280,280);
+    } else {
+      // put code for browsers that don’t support canvas here
+      alert("This page uses HTML 5 to render correctly. Other browsers may not see anything.");
+    }
+  }
+</script>
       
       
    
